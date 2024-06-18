@@ -1,13 +1,18 @@
-extends Sprite2D
-var minutes = 10
+extends CanvasLayer
+
+var is_timer = true
+
+var minutes = 0
 var seconds = 0
-var pause = true
+var decimal = 0
 
+var  mode_label = 'Timer'
 
-func _on_ready():
-	$Timmer.one_shot = true
+func update_label():
+	$Clabel.text = str(decimals)
+	$TimeLabel.text = '%02d:%'%[minutes,seconds]
 	
 	
+	
 
-func _on_boton_pressed():
-	pass # Replace with function body.
+

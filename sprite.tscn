@@ -1,0 +1,83 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjskhhatsyxww"]
+
+[ext_resource type="Script" path="res://sprite.gd" id="1_bjkyp"]
+[ext_resource type="Texture2D" uid="uid://xo46nr0kicej" path="res://assets/timer.png" id="1_qjkny"]
+[ext_resource type="FontFile" uid="uid://bttn4sbekg567" path="res://assets/alarm clock.ttf" id="3_r5iqa"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_bjkyp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(564, 326)
+scale = Vector2(0.43482, 0.489493)
+texture = ExtResource("1_qjkny")
+
+[node name="MainTimer" type="Timer" parent="."]
+
+[node name="TimeLabel" type="Label" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+offset_left = 402.0
+offset_top = 200.0
+offset_right = 715.0
+offset_bottom = 326.0
+theme_override_fonts/font = ExtResource("3_r5iqa")
+theme_override_font_sizes/font_size = 120
+text = "00:00"
+
+[node name="MinButton" type="Button" parent="."]
+offset_left = 375.0
+offset_top = 445.0
+offset_right = 383.0
+offset_bottom = 453.0
+scale = Vector2(11.7989, 11.421)
+theme_override_font_sizes/font_size = 200
+
+[node name="SecButton" type="Button" parent="."]
+offset_left = 503.0
+offset_top = 444.0
+offset_right = 511.0
+offset_bottom = 452.0
+scale = Vector2(11.4383, 11.0464)
+
+[node name="StartButton" type="Button" parent="."]
+offset_left = 648.0
+offset_top = 442.0
+offset_right = 656.0
+offset_bottom = 463.0
+scale = Vector2(10.3014, 4.39807)
+
+[node name="botonmodo" type="Button" parent="."]
+offset_left = 811.0
+offset_top = 351.0
+offset_right = 819.0
+offset_bottom = 359.0
+scale = Vector2(2.96217, 2.5684)
+
+[node name="ModeLabel" type="Label" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+offset_left = 379.0
+offset_top = 166.0
+offset_right = 419.0
+offset_bottom = 189.0
+theme_override_fonts/font = ExtResource("3_r5iqa")
+theme_override_font_sizes/font_size = 30
+text = "STATE"
+
+[node name="Clabel" type="Label" parent="."]
+offset_left = 803.0
+offset_top = 345.0
+offset_right = 843.0
+offset_bottom = 368.0
+scale = Vector2(1.47224, 1.54403)
+
+[node name="StatusLabel" type="Label" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+offset_left = 673.0
+offset_top = 164.0
+offset_right = 745.0
+offset_bottom = 197.0
+theme_override_fonts/font = ExtResource("3_r5iqa")
+theme_override_font_sizes/font_size = 30
+text = "STAR"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_botonstar_pressed"]
