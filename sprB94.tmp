@@ -33,7 +33,6 @@ theme_override_font_sizes/font_size = 60
 text = "0"
 
 [node name="MainTimer" type="Timer" parent="."]
-wait_time = 0.1
 
 [node name="Modo" type="Label" parent="."]
 self_modulate = Color(0, 0, 0, 1)
